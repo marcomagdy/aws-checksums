@@ -36,7 +36,7 @@ typedef uint32_t(*crc_func)(const uint8_t *input, int length, uint32_t previousC
 
 
 // Makes sure that the specified crc function produces the expected results for known input and output
-static int test_known_crc(const char *func_name, crc_func func, const char *data_name, const uint8_t *input, int length, uint32_t expected) {
+static int test_known_crc(const char *func_name, crc_func func, const char *data_name, const uint8_t *input, size_t length, uint32_t expected) {
 
     uint32_t result = func(input, length, 0);
     ASSERT_HEX_EQUALS(expected, result, "%s(%s)", func_name, data_name);
