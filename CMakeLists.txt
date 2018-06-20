@@ -91,7 +91,7 @@ file(GLOB TESTS ${TEST_HDRS} ${TEST_SRC})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tests)
 add_executable(aws-checksums-tests ${TESTS})
 target_link_libraries(aws-checksums-tests aws-checksums)
-set_target_properties(aws-checksums-tests PROPERTIES LINKER_LANGUAGE C)
+set_target_properties(aws-checksums-tests PROPERTIES LINKER_LANGUAGE C C_STANDARD 99)
 
 include(CTest)
 enable_testing()
