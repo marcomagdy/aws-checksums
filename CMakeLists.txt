@@ -107,6 +107,7 @@ install (
          EXPORT "${PROJECT_NAME}-config"
          ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib
+         RUNTIME DESTINATION lib
          COMPONENT library     
 )
 
